@@ -101,6 +101,9 @@ h1 {
 
 .form-group2 {
     padding: 40px;
+    margin-left: 27px;
+    height: 350px;
+    width: 350px;
 }
 
 label {
@@ -131,21 +134,25 @@ input {
 input#inome {
     position: relative;
     left: 27px;
+    padding: 3px;
 }
 
 input#iemail {
     position: relative;
     left: 21px;
+    padding: 3px;
 }
 
 input#iidade {
     position: relative;
     left: 26px;
+    padding: 3px;
 }
 
 input#icidade {
     position: relative;
     left: 15px;
+    padding: 3px;
 }
 
 button {
@@ -165,6 +172,12 @@ button {
 textarea {
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.616);
+    resize: none;
+    border-radius: 10px;
+    overflow: auto;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 button#envia:hover {

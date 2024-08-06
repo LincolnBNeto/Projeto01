@@ -95,6 +95,7 @@ h1#titulo {
     font-weight: bold;
     color: white;
     text-align: center;
+  
 }
 
 .card p {
@@ -164,4 +165,8 @@ a.embaixo{
 
 span.material-symbols-outlined {
     font-size: 18px;
+}
+
+.imagem{ 
+    
 }

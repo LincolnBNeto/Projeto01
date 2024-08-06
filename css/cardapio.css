@@ -17,8 +17,18 @@
     font-size: 1em;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cor6);
+}
+
 nav {
-    height: 110px;
+    height:auto;
     display: flex;
     background-color: black;
     justify-content: justify;
@@ -32,9 +42,10 @@ header > img#logo {
 
 ul {
     padding: 45px;
-
+    height:auto;
+    display: flex;
+    justify-content: justify;
 }
-
 
 a.encima{
     padding: 10px;
@@ -45,17 +56,15 @@ a.encima{
     text-align: center;
     font-weight: bold;
     line-height: 1.5em;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 } 
 
-a.encima:hover{
+.encima:hover{
     color: black;
     background-color: white;
     border-radius: 100px;
 }
-body {
-    background-color: #ffbb7f;
-}
+
 .cardapio2 {
     align-items: center;
     text-align: center;
@@ -143,6 +152,19 @@ footer {
     justify-content: center ;
 }
 
+.iso {
+    text-align: center;
+}
+
+.dentro {
+    line-height: 40px;
+}
+
+
+.isolada {
+    text-align: center;
+}
+
 footer h3 {
     color: yellow;
     font-weight: bold;
@@ -152,25 +174,18 @@ footer h3 {
     font-size: 2em;
 }
 
-.iso {
-    text-align: center;
-}
-.isolada {
-    text-align: center;
-}
-
-.dentro {
-    line-height: 40px;
-}
-
 a.embaixo{
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: color 0.3s;
+    transition: color 0.5s;
 } 
 
 .embaixo:hover {
     color: var(--cor1);
+}
+
+span.material-symbols-outlined {
+    font-size: 18px;
 }
