@@ -87,6 +87,14 @@ body > h1 {
 
 }
     
+.container > img {
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    flex-flow: wrap;
+    border-radius: 80px;
+}
 
 .card {
 	background-color: black;
@@ -95,8 +103,8 @@ body > h1 {
 	width: 600px;
     height:650px;
     margin: 50px;
+    
 }
-
 .card h2 {
     font-family: helvetica;
 	font-size: 24px;
@@ -116,8 +124,12 @@ body > h1 {
 	width: 100%;
     border-top-left-radius:10px ;
     border-top-right-radius:10px ;
+    border-radius: 10px;
+    
     
 }
+
+
 
 .isolada {
     text-align: center;

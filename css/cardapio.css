@@ -76,13 +76,12 @@ h1 {
     font-style: normal;
     text-align: center;
     padding: 50px;
-    color: yellow;
+    color: orange;
     font-weight: bold;
 }
 .container {
     display: flex;
     justify-content: space-evenly;
-    gap: 100px;
     padding: 10px;
     flex-flow: wrap;
     border-radius: 80px;

@@ -33,14 +33,20 @@ Grandes telas: acima de 1200px
         height: 15px;
     }
 
-    nav > ul {
+    nav  ul {
         height: 100px;
+        text-decoration: none;
         flex-direction: row;
         display: flex;
         padding: 0px;
         position: relative;
         gap: 10px;
         margin-top: 20px;
+    }
+
+    ul li {
+        padding-top: 30px;
+        list-style-type: none;
     }
 
     header img#logo {
@@ -104,6 +110,7 @@ Grandes telas: acima de 1200px
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+
     a.encima {
         font-size: 13px;
         margin: 0px;
@@ -114,7 +121,7 @@ Grandes telas: acima de 1200px
         height: 15px;
     }
 
-    nav > ul {
+    nav  ul {
         height: 100px;
         flex-direction: row;
         display: flex;
@@ -122,6 +129,11 @@ Grandes telas: acima de 1200px
         position: relative;
         gap: 40px;
         margin-top: 20px;
+        margin-left: 45px;
+    }
+
+    ul li {
+        padding-top: 30px;
     }
 
     header img#logo {
@@ -129,11 +141,8 @@ Grandes telas: acima de 1200px
     }
 
     .diferente {
-        font-size: 35px;
-    }
-
-    div#img2 {
-        padding: 28px;
+        font-size: 38px;
+        padding: 70px;
     }
 
     section.des1 {
@@ -200,6 +209,10 @@ Grandes telas: acima de 1200px
         gap: 40px;
         margin-top: 20px;
         margin-left: 70px;
+    }
+
+    ul li {
+        padding-top: 30px;
     }
 
     header img#logo {
