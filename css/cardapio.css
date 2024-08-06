@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor1: #A64F03;
+    --cor2: #D9831A;
+    --cor3: #5B5A2C;
+    --cor4: #2B1809;
+    --cor5: #A9908B;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+nav {
+    height: 110px;
+    display: flex;
+    background-color: black;
+    justify-content: justify;
+}
+
+header > img#logo {
+    height: 70px;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+ul {
+    padding: 45px;
+
+}
+
+
+a.encima{
+    padding: 10px;
+    margin: 70px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5em;
+    transition: all 0.3s ease;
+} 
+
+a.encima:hover{
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+}
+body {
+    background-color: #ffbb7f;
+}
+.cardapio2 {
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+    padding: 30px;
+    
+}
+.cardapio2 > img {
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.466);
+}
+.logo1 {
+    align-items: center;
+}
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    text-align: center;
+    padding: 50px;
+    color: yellow;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    padding: 10px;
+    flex-flow: wrap;
+    border-radius: 80px;
+}
+.card {
+	background-color: #A64F03;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.466);
+	width: 300px;
+    height:500px;
+    margin: 50px;
+    border-radius: 30px;
+}
+.card > p{
+    padding: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    text-align: center;
+    color: yellow;
+    font-weight: bold;
+}
+.card > img {
+    border-radius: 10px;
+}
+.container > img {
+    border-radius: 40px;
+}
+
+.nomes{
+    display: flex;
+    align-items: center;
+    gap: 240px;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+.nomes > p{
+    font-family: fantasy;
+}
+h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    text-align: center;
+    padding: 50px;
+    color: yellow;
+    font-weight: bold;
+    
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    bottom: auto;
+    display: flex;
+    gap: 300px;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
+    justify-content: center ;
+}
+
+footer h3 {
+    color: yellow;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2em;
+}
+
+.iso {
+    text-align: center;
+}
+.isolada {
+    text-align: center;
+}
+
+.dentro {
+    line-height: 40px;
+}
+
+a.embaixo{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+} 
+
+.embaixo:hover {
+    color: var(--cor1);
+}
