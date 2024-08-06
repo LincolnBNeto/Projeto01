@@ -43,6 +43,10 @@
         margin: 0px;
     }
 
+    .card div img {
+        left: 50px;
+    }
+
     div#cardapio {
         width: max-content;
         height: max-content;
