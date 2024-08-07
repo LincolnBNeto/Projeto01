@@ -20,6 +20,8 @@
 
 body {
     background-color: var(--cor6);
+    height: 100%;
+    width: 100%;
 }
 
 nav {
@@ -123,7 +125,7 @@ h1#novo {
     padding-top: 100px;
 }
 
-.imagem2 {
+section.imagem2 {
     
     height: 305px;
     background-image: url("../image/IMG_4502.jpeg");

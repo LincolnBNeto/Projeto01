@@ -14,7 +14,7 @@
 
 @media (max-width: 600px) {
     a.encima {
-        font-size: 12px;
+        font-size: 8px;
         margin: 0px;
         margin-top: 20px;
         transition: all 0.5s;
@@ -30,7 +30,7 @@
         display: flex;
         padding: 0px;
         position: relative;
-        gap: 10px;
+        gap: 0px;
         margin-top: 20px;
     }
 
@@ -41,6 +41,9 @@
 
     header img#logo {
         margin: 0px;
+        margin-top: 21px;
+        height: 40px;
+        width: 40px;
     }
 
     .card div img {
@@ -53,7 +56,7 @@
     }
 
     footer {
-        gap: 30px;
+        gap: 10px;
     }
 
     footer h3 {
@@ -61,11 +64,12 @@
     }
 
     a.embaixo {
-        font-size: 15px;
+        font-size: 11px;
+
     }
 
     span.material-symbols-outlined {
-        font-size: 15px;
+        font-size: 11px;
     }
 }
 

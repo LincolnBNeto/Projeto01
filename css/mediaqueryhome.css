@@ -22,9 +22,9 @@ Desktop: 992px até 1200px
 Grandes telas: acima de 1200px
 */
 
-@media (max-width: 600px) {
+@media (max-width: 425px) {
     a.encima {
-        font-size: 12px;
+        font-size: 8px;
         margin: 0px;
         margin-top: 20px;
         transition: all 0.5s;
@@ -40,7 +40,7 @@ Grandes telas: acima de 1200px
         display: flex;
         padding: 0px;
         position: relative;
-        gap: 10px;
+        gap: 0px;
         margin-top: 20px;
     }
 
@@ -51,10 +51,35 @@ Grandes telas: acima de 1200px
 
     header img#logo {
         margin: 0px;
+        margin-top: 21px;
+        height: 40px;
+        width: 40px;
     }
 
     .diferente {
-        font-size: 36px;
+        font-size: 29px;
+    }
+
+    .bares {
+        height: 200px;
+        width: 250px;
+    }
+
+    img#mudanca {
+        height: 200px;
+        width: 250px;
+    }
+
+    h2.texto2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    div#historia {
+        padding: 10px;
     }
 
     section.des1 {
@@ -64,6 +89,18 @@ Grandes telas: acima de 1200px
     section.des1 div {
         margin: 0px;
         text-align: center;
+    }
+
+    div.dentro {
+        height: 20px;
+        padding: 10px;
+        line-height: 10px;
+    }
+
+    img#logotexto {
+        height: 150px;
+        width: 150px;
+        padding-bottom: 57px;
     }
 
     section.des1 article {
@@ -82,6 +119,7 @@ Grandes telas: acima de 1200px
 
     .texto2 {
         font-size: 27px;
+        padding-bottom: 45px;
     }
 
     div#historia {
@@ -94,23 +132,24 @@ Grandes telas: acima de 1200px
     }
 
     footer {
-        gap: 30px;
+        gap: 10px;
     }
 
     footer h3 {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     a.embaixo {
-        font-size: 15px;
+        font-size: 10px;
+
     }
 
     span.material-symbols-outlined {
-        font-size: 15px;
+        font-size: 11px;
     }
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
 
     a.encima {
         font-size: 13px;
@@ -142,8 +181,14 @@ Grandes telas: acima de 1200px
     }
 
     .diferente {
-        font-size: 38px;
+        font-size: 25px;
         padding: 70px;
+    }
+
+    img#logotexto {
+        height: 150px;
+        width: 150px;
+        padding-bottom: 10px;
     }
 
     section.des1 {
@@ -164,8 +209,8 @@ Grandes telas: acima de 1200px
         margin-bottom: 40px;
     }
 
-    .texto2 {
-        font-size: 27px;
+    h2.texto2 {
+        font-size: 28px;
     }
 
     div#historia {

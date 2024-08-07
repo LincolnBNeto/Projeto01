@@ -46,7 +46,8 @@
             </div>
             <div id="botoes">
                 <button type="reset" id="limpa">Limpar</button>
-                <button type="submit" id="envia">Enviar</button>
+                <button type="submit" id="envia" onclick="mensagem()" >Enviar</button>
+                <input type="hidden" name="redirectTo">
             </div>
         </form>
     </div>
@@ -85,3 +86,8 @@
     </footer>
 </body>
 </html>
+<script>
+    function mensagem() {
+        alert("Enviado com sucesso !!")
+    }
+</script>
