@@ -22,6 +22,31 @@ Desktop: 992px até 1200px
 Grandes telas: acima de 1200px
 */
 
+
+@media (width: 375px) {
+    section.imagem2{
+        height: 260px;
+    }
+}
+
+@media (width: 425px) {
+    nav ul  {
+        margin: 10px;
+    }
+    
+    nav ul li {
+        padding-right: 20px;
+    }
+
+    .imagem {
+        height: 500px;
+    }
+
+    section.imagem2 {
+        height: 260px;
+    }
+}
+
 @media (max-width: 425px) {
     a.encima {
         font-size: 8px;
@@ -235,7 +260,7 @@ Grandes telas: acima de 1200px
 
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
     a.encima {
         font-size: 13px;
         margin: 0px;
@@ -309,5 +334,67 @@ Grandes telas: acima de 1200px
 
     span.material-symbols-outlined {
         font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    a.encima {
+        font-size: 17px;
+        margin: 0px;
+        margin-top: 20px;
+        transition: all 0.5s;
+    }
+    .encima:hover {
+        height: 15px;
+    }
+
+    nav > ul {
+        height: 100px;
+        flex-direction: row;
+        display: flex;
+        padding: 0px;
+        position: relative;
+        gap: 100px;
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+
+    ul li {
+        padding-top: 30px;
+    }
+
+    header img#logo {
+        margin: 0px;
+        padding-left: 50px;
+    }
+
+    .diferente {
+        font-size: 52px;
+    }
+
+    img#logotexto {
+        padding: 18px;
+    }
+
+    section.des1 article {
+        padding: 20px;
+        margin-left: 70px;
+    }
+
+    h2.texto2 {
+        font-size: 30px;
+    }
+
+    section.imagem2 {
+        height: 280px;
+    }
+
+    div#historia {
+        margin: 30px;
+    }
+    
+    iframe {
+        height: 300px;
+        width: 400px;
     }
 }
