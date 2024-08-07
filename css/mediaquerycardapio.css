@@ -43,9 +43,9 @@
         margin: 0px;
     }
 
-    div#cardapio {
-        width: max-content;
-        height: max-content;
+    img#cardapio {
+        width: 400px;
+        height: 200px;
     }
 
     footer {
