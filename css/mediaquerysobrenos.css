@@ -12,7 +12,22 @@
     --cor6: #ffbb7f;
 }
 
-@media (max-width: 600px) {
+
+@media (width: 425px) {
+    nav ul  {
+        margin: 10px;
+    }
+    
+    nav ul li {
+        padding-right: 20px;
+    }
+
+    div.imagem {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 425px) {
     a.encima {
         font-size: 8px;
         margin: 0px;
@@ -55,16 +70,32 @@
         height: max-content;
     }
 
+    h1#titulo {
+        font-size: 2em;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .card div h2 {
+        font-size: 20px;
+    }
+
+    .card div img {
+        position: static;
+    }
+
     footer {
         gap: 10px;
     }
 
     footer h3 {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     a.embaixo {
-        font-size: 11px;
+        font-size: 10px;
 
     }
 
@@ -73,7 +104,7 @@
     }
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
     a.encima {
         font-size: 13px;
         margin: 0px;
@@ -120,7 +151,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
     a.encima {
         font-size: 13px;
         margin: 0px;
@@ -165,5 +196,45 @@
 
     span.material-symbols-outlined {
         font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    a.encima {
+        font-size: 17px;
+        margin: 0px;
+        margin-top: 20px;
+        transition: all 0.5s;
+    }
+    .encima:hover {
+        height: 15px;
+    }
+
+    nav > ul {
+        height: 100px;
+        flex-direction: row;
+        display: flex;
+        padding: 0px;
+        position: relative;
+        gap: 100px;
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+
+    ul li {
+        padding-top: 30px;
+    }
+
+    header img#logo {
+        margin: 0px;
+        padding-left: 50px;
+    }
+
+    .diferente {
+        font-size: 52px;
+    }
+
+    img#logotexto {
+        padding: 18px;
     }
 }
