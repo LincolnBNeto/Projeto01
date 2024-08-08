@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lahara</title>
+    <link rel="stylesheet" href="../css/pedidos.css">
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <nav>
+        <header id="img">
+            <img src="../image/apple-touch-icon.png" alt="logo" id="logo">
+        </header>
+        <ul>
+            <li><a href="../html/index.html" class="encima">Home</a></li>
+            <li><a href="../html/cardapio.html" class="encima">Cardápio</a></li>
+            <li><a href="../html/sobrenos.html" class="encima">Sobre nós</a></li>
+            <li><a href="../html/formulario.html" class="encima">Contato</a></li>
+            <li><a href="../html/ingresso.html" class="encima">Ingressos</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Ingresso</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="inome">Nome:</label>
+                <input type="text" placeholder="Digite seu nome" id="inome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="iemail">E-mail:</label>
+                <input type="email" placeholder="Digite seu E-mail" id="iemail" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="icpf">CPF:</label>
+                <input type="number" placeholder="Digite seu CPF"id="icpf" name="cpf" required>
+            </div>
+
+            <div class="form-group">
+                <label for="endereço">Endereço:</label>
+                <input type="text" placeholder="Digite seu endereço" id="ien" name="endereço" required>
+            </div>
+
+            <div class="form-group3">
+                <label for="endereço">Doença:</label>
+
+                <div class="marcacao">
+                    <input type="checkbox" name="endereço" id="icard">
+                    <label for="icard" class="nomezinhos">Problemas Cardíacos</label>
+
+                    <input type="checkbox" name="endereço" id="eres" required>
+                    <label for="eres" class="nomezinhos">Problemas Respiratorios</label>
+                </div>
+                <div class="marcacao">
+                    <input type="checkbox" name="endereço" id="cad" required>
+                    <label for="cad" class="nomezinhos">Cadeirante</label>
+                    
+                    <input type="checkbox" name="endereço" id="not" required>
+                    <label for="not" class="nomezinhos">Não</label>
+                </div>
+            
+            </div>
+
+            <div class="form-group3">
+                <label for="endereço">Sexo:</label>
+
+                <div class="marcacao">
+                    <label for="msc" class="nomezinhos">Masculino</label>
+                    <input type="radio" name="sex" id="msc" required>
+                    <label for="fmn" class="nomezinhos" >Feminino</label>
+                    <input type="radio" name="sex" id="fmn" required>
+                </div>
+            </div>
+
+            <div class="form-group3">
+                <label for="ipay">Forma de Pagamento:</label>
+                <div>
+                    <select name="pay" id="ipay">
+                        <option value="0">Selecionar</option>
+                        <option value="1">Cartão de Credito</option>
+                        <option value="2">Cartão de Debito</option>
+                        <option value="3">Pix</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group2">
+                <label for="itexto">Mensagem:</label>
+                <textarea name="texto" id="itexto" placeholder="Digite sua mensagem" cols="38" rows="15"></textarea>
+            </div>
+            
+            <div id="botoes">
+                <button type="reset" id="limpa">Limpar</button>
+                <button type="submit" id="envia" onclick="mensagem()" >Enviar</button>
+                <input type="hidden" name="redirectTo">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <section class="footer">
+            <div class="iso">
+                <h3>SOBRE</h3>
+                <div class="dentro">
+                    <span class="material-symbols-outlined">mail</span><a href="#" class="embaixo">lahara.bar01@gmail.com</a>
+                </div>
+                <div class="dentro">
+                    <span class="material-symbols-outlined">alternate_email</span><a href="#" class="embaixo">lahara</a>
+                </div>
+                <div class="dentro">
+                    <span class="material-symbols-outlined">call</span><a href="#" class="embaixo">(41) 99436-8938</a>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="isolada">
+                <h3>Desenvolvido por:</h3>
+                <div class="dentro">
+                    <a href="https://www.instagram.com/lincolnmgl?igsh=NDRxajQ2eXl5OGN6&utm_source=qr"  target="_blank" class="embaixo">Lincoln Brunkow Neto</a>
+                </div>
+                <div class="dentro">
+                    <a href="#"  target="_blank" class="embaixo">Nicolas Hara Tancon</a>
+                </div>
+                <div class="dentro">
+                    <a href="#" target="_blank" class="embaixo">Thales Henrique Calil</a>
+                </div>
+                <div class="dentro"> 
+                    <a href="#" target="_blank" class="embaixo">Thiago Akimoto</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
+<script>
+    function mensagem() {
+        alert("Enviado com sucesso !!")
+    }
+</script>
