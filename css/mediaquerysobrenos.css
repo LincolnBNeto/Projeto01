@@ -238,3 +238,17 @@
         padding: 18px;
     }
 }
+
+@media (min-width: 2560px) {
+    nav {
+        font-size: 30px;
+    }
+
+    header > img#logo {
+        height: 100px;
+    }
+
+    ul {
+        padding-left: 480px;
+    }
+}

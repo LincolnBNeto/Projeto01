@@ -12,7 +12,17 @@
     --cor6: #ffbb7f;
 }
 
-@media (max-width: 600px) {
+@media (width: 425px) {
+    nav ul  {
+        margin: 10px;
+    }
+    
+    nav ul li {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 425px) {
     a.encima {
         font-size: 8px;
         margin: 0px;
@@ -51,16 +61,51 @@
         padding-left: 3px;
     }
 
+    div.form-group {
+        font-size: 10px;
+        width: 200px;
+        left: 20px;
+    } 
+
+    input#iemail {
+        left: 33px;
+    }
+
+    input#iidade {
+        left: 26px;
+    }
+    
+    input#icidade {
+        left: 20px;
+    }
+
+    div.form-group2 {
+        margin: 0px;
+        margin-left: 40px;
+        padding: 0px;
+        width: 200px;
+    }
+
+    textarea#itexto {
+        width: 250px;
+        height: 300px;
+        padding-bottom: 40px;
+    }
+
+    div#botoes {
+        margin-left: 40px;
+    }
+
     footer {
         gap: 10px;
     }
 
     footer h3 {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     a.embaixo {
-        font-size: 11px;
+        font-size: 10px;
 
     }
 
@@ -69,7 +114,7 @@
     }
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
     a.encima {
         font-size: 13px;
         margin: 0px;
@@ -116,7 +161,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
     a.encima {
         font-size: 13px;
         margin: 0px;
@@ -161,5 +206,57 @@
 
     span.material-symbols-outlined {
         font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    a.encima {
+        font-size: 17px;
+        margin: 0px;
+        margin-top: 20px;
+        transition: all 0.5s;
+    }
+    .encima:hover {
+        height: 15px;
+    }
+
+    nav > ul {
+        height: 100px;
+        flex-direction: row;
+        display: flex;
+        padding: 0px;
+        position: relative;
+        gap: 100px;
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+
+    ul li {
+        padding-top: 30px;
+    }
+
+    header img#logo {
+        margin: 0px;
+        padding-left: 50px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 2559px){    
+    ul {
+        padding-left: 90px;
+    }
+}
+
+@media (min-width: 2560px) {
+    nav {
+        font-size: 30px;
+    }
+
+    header > img#logo {
+        height: 100px;
+    }
+
+    ul {
+        padding-left: 480px;
     }
 }
