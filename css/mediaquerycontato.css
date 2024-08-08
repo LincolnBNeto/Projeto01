@@ -24,7 +24,7 @@
 
 @media (max-width: 425px) {
     a.encima {
-        font-size: 8px;
+        font-size: 5px;
         margin: 0px;
         margin-top: 20px;
         transition: all 0.5s;
@@ -226,7 +226,7 @@
         display: flex;
         padding: 0px;
         position: relative;
-        gap: 100px;
+        gap: 50px;
         margin-top: 20px;
         margin-left: 70px;
     }

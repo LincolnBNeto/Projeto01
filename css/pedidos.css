@@ -25,7 +25,7 @@ nav {
 }
 
 header > img#logo {
-    height: 70px;
+    height: 90px;
     padding: 20px;
     margin-left: 50px;
 }
@@ -39,7 +39,7 @@ ul {
 
 a.encima{
     padding: 10px;
-    margin: 70px;
+    margin: 50px;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -58,167 +58,11 @@ a.encima{
 
 html {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../image/IMG_4502.jpeg'); 
+    background-image: url('../image/IMG_502.jpeg'); 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-}
-
-body {
-    background-color: rgba(0, 0, 0, 0.281);
-}
-
-.container {
-    max-width: 485px;
-    margin: auto;
-    text-align: center;
-    padding: 10px 30px;
-    background-color: var(--cor2); 
-    border-radius: 20px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 3em;
-    font-family: "Bebas Neue", sans-serif;
-    color: yellow;
-    text-shadow: 2px 4px 2px black;
-}
-
-
-.form-group {
-    width: 350px;
-    display: flex;
-    padding: 10px;
-    position: relative;
-    left: 60px;
-}
-
-.form-group2 {
-    padding: 40px;
-    margin-left: 27px;
-    height: 350px;
-    width: 350px;
-}
-
-.form-group3 {
-    padding: 40px;
-    margin-left: 27px;
-    width: 350px;
-}
-
-div.form-group3 input {
-    font-size: 10px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.301);
-}
-
-.form-group2 label {
-    padding-bottom: 30px;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 35px;
-    color: yellow;
-    text-shadow: 5px 3px 1px rgba(0, 0, 0, 0.616);
-}
-
-.nomezinhos {
-    font-size: 15px;
-    text-shadow: none;
-    padding-right: 60px;
-}
-
-div.marcacao {
-    text-align: justify;
-    gap: 10px;
-    justify-content: center ;
-    display: flex;
-}
-
-div.marcacao input {
-    width: 20px;
-}
-
-input {
-    width: 250px;
-    height: 30px;
-    border-radius: 5px;
-    position: relative;
-}
-
-
-input#inome {
-    position: relative;
-    left: 27px;
-    padding: 3px;
-}
-
-input#iemail {
-    position: relative;
-    left: 21px;
-    padding: 3px;
-}
-
-input#iidade {
-    position: relative;
-    left: 26px;
-    padding: 3px;
-}
-
-input#icidade {
-    position: relative;
-    left: 15px;
-    padding: 3px;
-}
-
-button {
-    width: 200px;
-    padding: 10px;
-    background-color: #000000;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.1s;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    width: 150px;
-}
-
-textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.616);
-    resize: none;
-    border-radius: 10px;
-    overflow: auto;
-    font-size: 1em;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-button#envia:hover {
-    background-color: green;
-}
-
-button#limpa:hover {
-    background-color: red;
-}
-
-div#botoes {
-    display: flex;
-    gap: 30px;
-    margin-left: 80px;
-    padding: 30px 0px;
 }
 
 footer {
