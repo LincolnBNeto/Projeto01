@@ -28,24 +28,24 @@
         <form action="#" method="post">
             <div>
                 <h2>Data e hora:</h2>
-                <div>
+                <div class="form-group">
                     <label for="idata">Data:</label>
                     <input type="date"  id="idata" name="data" required>
-                <div class="form-group">
+                <div>
                     <label for="ihora">Hora:</label>
                     <input type="time"  id="ihora" name="hora" min="15:00" max="01:00" required>
                 </div>
             </div>
             <div>
                 <h2>Número de pessoas</h2>
-                <div>
-                    <label for="in">Pessoas</label>
+                <h3>(máximo 50 pessoas)</h3>
+                <div class="form-group">
                     <input type="number" name="number" id="in" min="1" max="50" step="1">
                 </div>
             </div>
             <div>
                 <h2>Dados pessoais:</h2>
-                <div>
+                <div class="form-group">
                     <label for="inome">Nome:</label>
                     <input type="text" placeholder="Digite seu nome" id="inome" name="nome" required>
                 </div>
@@ -53,25 +53,25 @@
                     <label for="iemail">E-mail:</label>
                     <input type="email" id="iemail" name="email" placeholder="exemplo@dominio.com" title="O email deve conter um @ e um domínio válido." required>
                 </div>
-                <div>
-                    <label for="iphone">Telefone:</label>
+                <div class="form-group">
+                    <label for="iphone">fone:</label>
                     <input type="text" id="iphone" name="phone" placeholder="(00) 00000-0000"  title="Formato: (00) 00000-0000" required>
                 </div>
                 <div class="form-group">
                     <label for="icpf">CPF:</label>
                     <input type="text" id="icpf" name="cpf" placeholder="xxx.xxx.xxx-xx" title="Formato: xxx.xxx.xxx-xx" required>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="ien">Endereço:</label>
                     <input type="text" placeholder="Digite seu endereço" id="ien" name="endereço" required>
                 </div>
-                <div>
-                    <label for="city">Cidade:</label>
-                    <input type="text" id="city" name="city" placeholder="Digite sua cidade" required>
+                <div class="form-group">
+                    <label for="icity">Cidade:</label>
+                    <input type="text" id="icity" name="city" placeholder="Digite sua cidade" required>
                 </div>
-                <div>
-                    <label for="state">Estado:</label>
-                    <select id="state" name="state">
+                <div class="form-group">
+                    <label for="istate">Estado:</label>
+                    <select id="istate" name="state">
                         <option value="">Selecione...</option>
                         <option value="ac">Acre</option>
                         <option value="al">Alagoas</option>
@@ -105,88 +105,90 @@
             </div>
             <div>
                 <h2>Sexo:</h2>
-
-                <div>
+                <div class="form-group2">
+                    <input type="radio" name="sexo"> 
                     <label for="msc" class="nomezinhos">Masculino</label> 
-                    <input type="radio" name="sexo" id="msc" required> <br>
+                </div>
+                <div class="form-group2">
+                    <input type="radio" name="sexo" id="fmn">
                     <label for="fmn" class="nomezinhos" >Feminino</label>
-                    <input type="radio" name="sexo" id="fmn" required>
                 </div>
             </div>
             <div>
                 <h2>Tipo de reserva:</h2>
 
-                <div>
+                <div class="form-group2">
+                    <input type="radio" name="tp" id="mesa"> 
                     <label for="mesa">Mesa</label> 
-                    <input type="radio" name="tp" id="mesa" required> 
                 </div>
-                <div>
+                <div class="form-group2">
+                    <input type="radio" name="tp" id="lg">
                     <label for="lg">Area de lounge</label>
-                    <input type="radio" name="tp" id="lg" required>
+                    
                 </div>
-                <div>
+                <div class="form-group2">
+                    <input type="radio" name="tp" id="ev">
                     <label for="ev">Area VIP</label>
-                    <input type="radio" name="tp" id="ev" required>
                 </div>
-                <div>
+                <div class="form-group2">
+                    <input type="radio" name="tp" id="ot">
                     <label for="ot">Outro</label>
-                    <input type="radio" name="tp" id="ot" required>
                 </div>
             </div>
             <div>
                 <h2>Preferência de assento:</h2>
 
-                <div>
-                    <label for="mu">Área com música</label> 
+                <div class="form-group2">
                     <input type="radio" name="area" id="mu" required> 
+                    <label for="mu">Área com música</label> 
                 </div>
-                <div>
-                    <label for="inte">Interior</label>
+                <div class="form-group2">
                     <input type="radio" name="area" id="inte" required>
+                    <label for="inte">Interior</label>
                 </div>
-                <div>
-                    <label for="ex">Exterior</label>
+                <div class="form-group2">
                     <input type="radio" name="area" id="ex" required>
+                    <label for="ex">Exterior</label>
                 </div>
-                <div>
-                    <label for="tr">Área mais tranquila</label>
+                <div class="form-group2">
                     <input type="radio" name="area" id="tr" required>
+                    <label for="tr">Área mais tranquila</label>
                 </div>
             </div>
             <div>
                 <h2 for="endereço">Necessidades especiais:</h2>
-
-                <div>
+                <div class="form-group2">
                     <input type="checkbox" name="endereço" id="icard">
-                    <label for="icard" class="nomezinhos">Necessidades de acessibilidade</label> 
+                    <label for="icard" class="nomezinhos">Necessidades especiais</label> 
                 </div>
+                <div class="form-group2">
                     <input type="checkbox" name="endereço" id="eres" required>
-                    <label for="eres" class="nomezinhos">Preferências alimentares ou dietéticas</label>
+                    <label for="eres" class="nomezinhos">Preferências alimentares</label>
                 </div>
-                <div>
-                    <input type="checkbox" name="endereço" id="cad" required>
-                    <label for="cad" class="nomezinhos">Decoração especial para celebrações</label>
+                <div class="form-group2">
+                    <input type="checkbox" name="endereço" id="cad">
+                    <label for="cad" class="nomezinhos">Decoração especial</label>
                 </div>
-                <div>
-                    <input type="checkbox" name="endereço" id="io" required>
+                <div class="form-group2">
+                    <input type="checkbox" name="endereço" id="io">
                     <label for="io" class="nomezinhos">Outro</label>
                 </div>
-                <div >
-                    <input type="checkbox" name="endereço" id="not" required>
+                <div class="form-group2">
+                    <input type="checkbox" name="endereço" id="not">
                     <label for="not" class="nomezinhos">Não</label>
                 </div>
-                <div>
+                <div class="form-group3">
                     <textarea name="texto" id="itexto" placeholder="Digite aqui sua necessidade" cols="38" rows="15"></textarea>
                 </div>
             </div>
 
-            <div>
+            <div class="form-group3">
                 <h2>Informações adicionais</h2>
                 <textarea name="texto" id="itexto" placeholder="Digite sua mensagem" cols="38" rows="15"></textarea>
             </div>
             <div>
-                <label for="communication-preferences">Preferências de Comunicação:</label>
-                <select id="communication-preferences" name="communication-preferences">
+                <label for="icommunication-preferences">Preferências de Comunicação:</label>
+                <select id="icommunication-preferences" name="communication-preferences">
                     <option value="email">E-mail</option>
                     <option value="sms">SMS</option>
                     <option value="both">Ambos</option>
@@ -194,8 +196,8 @@
             </div>
             <div>
                 <h2>Forma de Pagamento:</h2>
-                <p>Para efetuar a reserva, deve ser efetuado o pagamento no valor de <a href="#">R$100,00</a></p>
-                <div>
+                <p>Para efetuar a reserva, deve ser efetuado o pagamento no valor de <a href="#" class="privacidade">R$100,00</a></p>
+                <div class="cartao">
                     <select name="pay" id="ipay">
                         <option value="0">Selecionar</option>
                         <option value="1">Cartão de Credito</option>
@@ -204,21 +206,21 @@
                     </select>
                 </div>
             </div>
-            <div>
+            <div class="promo">
                 <label for="ipromo-code">Código de Promoção:</label>
                 <input type="text" id="ipromo-code" name="promo-code" min="1" max="7">
             </div>
-            <div>
-                <p>Li e aceito a <a href="#privacy-policy">Política de Privacidade</a></p>
+            <div class="form-group4">
+                <p>Li e aceito a <a href="#" class="privacidade">Política de Privacidade</a></p>
                 <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
                 <label for="privacy-consent">Consentimento de Dados</label>
             </div>
-            <div>
-                <p>Leia e aceite nossa <a href="#">Política de Cancelamento</a></p>
+            <div class="form-group4">
+                <p>Leia e aceite nossa <a href="#" class="privacidade">Política de Cancelamento</a></p>
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">Aceito os termos e condições</label>
             </div>
-            <div>
+            <div id="botoes">
                 <button type="reset" id="limpa">Limpar</button>
                 <button type="submit" id="envia" onclick="mensagem()" >Enviar</button>
                 <input type="hidden" name="redirectTo">

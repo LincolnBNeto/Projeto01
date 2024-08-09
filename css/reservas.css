@@ -58,11 +58,208 @@ a.encima{
 
 html {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../image/IMG_502.jpeg'); 
+    background-image: url('../image/bar2.png '); 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+.container {
+    max-width: 485px;
+    margin: auto;
+    text-align: center;
+    padding: 10px 30px;
+    background-color: var(--cor2); 
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 3em;
+    font-family: "Bebas Neue", sans-serif;
+    color: yellow;
+    text-shadow: 2px 4px 2px black;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-top: 30px;
+    font-size: 2em;
+    font-family: "Bebas Neue", sans-serif;
+    color: yellow;
+    text-shadow: 2px 4px 2px black;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+.form-group {
+    padding: 15px;
+    text-align: justify;
+    margin-left: 90px;
+}
+
+input {
+    padding: 7px;
+    border-radius: 6px;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input#idata {
+    position: relative;
+    left: 60px;
+    margin-bottom: 15px;
+}
+
+input#ihora {
+    position: relative;
+    left: 55px;
+}
+
+input#in {
+    position: relative;
+    left: 112px;
+}
+
+input#inome {
+    position: relative;
+    left: 50px;
+}
+
+input#iemail {
+    position: relative;
+    left: 44px;
+}
+
+input#iphone {
+    position: relative;
+    left: 55px;
+}
+
+input#icpf {
+    position: relative;
+    left: 67px;
+}
+
+input#ien {
+    position: relative;
+    left: 10px;
+}
+
+input#icity {
+    position: relative;
+    left: 39px;
+}
+
+select#istate{
+    position: relative;
+    left: 35px;
+    border-radius: 6px;
+    padding: 7px;
+    width: 185px;
+}
+
+.form-group2 {
+    padding: 8px;
+    text-align: justify;
+    margin-left: 110px;
+}
+
+.form-group2 label {
+    margin-left: 30px;
+}
+
+.form-group3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.form-group3 textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.616);
+    resize: none;
+    border-radius: 10px;
+    overflow: auto;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+select#ipay {
+    border-radius: 6px;
+    padding: 7px;
+}
+
+.form-group4 {
+    padding: 20px;
+}
+
+p {
+    margin: 0px 40px;
+}
+
+.promo {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+div select#icommunication-preferences{
+    border-radius: 6px;
+    padding: 7px;
+    margin-left: 15px;
+}
+
+div.cartao {
+    padding-top: 20px;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.1s;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+}
+
+button#envia:hover {
+    background-color: green;
+}
+
+button#limpa:hover {
+    background-color: red;
+}
+
+div#botoes {
+    display: flex;
+    gap: 30px;
+    margin-left: 80px;
+    padding: 30px 0px;
+}
+
+a.privacidade{
+    font-size: 18px;
+} 
+
+.privacidade:hover {
+    color: yellow;
 }
 
 footer {
