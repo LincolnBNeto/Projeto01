@@ -33,6 +33,21 @@
         height: 15px;
     }
 
+    div.form-group {
+        margin-left: 0px
+    }
+
+    input#icpf {
+        left: 10px;
+    }
+    
+    textarea {
+        width: 200px;
+    }
+    div.form-group2 {
+        margin-left: 10px;
+    }
+
     nav  ul {
         height: 100px;
         text-decoration: none;
