@@ -75,6 +75,10 @@
         gap: 10px;
     }
 
+    div#botoes {
+        margin: 0px;
+    }
+
     footer h3 {
         font-size: 14px;
     }
