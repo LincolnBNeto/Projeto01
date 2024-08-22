@@ -30,10 +30,10 @@
                 <h2>Data e hora:</h2>
                 <div class="form-group">
                     <label for="idata">Data:</label>
-                    <input type="date"  id="idata" name="data" required>
+                    <input type="date"  id="idata" name="data">
                 <div>
                     <label for="ihora">Hora:</label>
-                    <input type="time"  id="ihora" name="hora" min="15:00" max="01:00" required>
+                    <input type="time"  id="ihora" name="hora" min="15:00" max="01:00">
                 </div>
             </div>
             <div>
@@ -47,27 +47,27 @@
                 <h2>Dados pessoais:</h2>
                 <div class="form-group">
                     <label for="inome">Nome:</label>
-                    <input type="text" placeholder="Digite seu nome" id="inome" name="nome" required>
+                    <input type="text" placeholder="Digite seu nome" id="inome" name="nome" >
                 </div>
                 <div class="form-group">
                     <label for="iemail">E-mail:</label>
-                    <input type="email" id="iemail" name="email" placeholder="exemplo@dominio.com" title="O email deve conter um @ e um domínio válido." required>
+                    <input type="email" id="iemail" name="email" placeholder="exemplo@dominio.com" title="O email deve conter um @ e um domínio válido.">
                 </div>
                 <div class="form-group">
                     <label for="iphone">fone:</label>
-                    <input type="text" id="iphone" name="phone" placeholder="(00) 00000-0000"  title="Formato: (00) 00000-0000" required>
+                    <input type="text" id="iphone" name="phone" placeholder="(00) 00000-0000"  title="Formato: (00) 00000-0000" >
                 </div>
                 <div class="form-group">
                     <label for="icpf">CPF:</label>
-                    <input type="text" id="icpf" name="cpf" placeholder="xxx.xxx.xxx-xx" title="Formato: xxx.xxx.xxx-xx" required>
+                    <input type="text" id="icpf" name="cpf" placeholder="xxx.xxx.xxx-xx" title="Formato: xxx.xxx.xxx-xx" >
                 </div>
                 <div class="form-group">
                     <label for="ien">Endereço:</label>
-                    <input type="text" placeholder="Digite seu endereço" id="ien" name="endereço" required>
+                    <input type="text" placeholder="Digite seu endereço" id="ien" name="endereço">
                 </div>
                 <div class="form-group">
                     <label for="icity">Cidade:</label>
-                    <input type="text" id="icity" name="city" placeholder="Digite sua cidade" required>
+                    <input type="text" id="icity" name="city" placeholder="Digite sua cidade" >
                 </div>
                 <div class="form-group">
                     <label for="istate">Estado:</label>
@@ -139,19 +139,19 @@
                 <h2>Preferência de assento:</h2>
 
                 <div class="form-group2">
-                    <input type="radio" name="area" id="mu" required> 
+                    <input type="radio" name="area" id="mu" > 
                     <label for="mu">Área com música</label> 
                 </div>
                 <div class="form-group2">
-                    <input type="radio" name="area" id="inte" required>
+                    <input type="radio" name="area" id="inte">
                     <label for="inte">Interior</label>
                 </div>
                 <div class="form-group2">
-                    <input type="radio" name="area" id="ex" required>
+                    <input type="radio" name="area" id="ex" >
                     <label for="ex">Exterior</label>
                 </div>
                 <div class="form-group2">
-                    <input type="radio" name="area" id="tr" required>
+                    <input type="radio" name="area" id="tr" >
                     <label for="tr">Área mais tranquila</label>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                     <label for="icard" class="nomezinhos">Necessidades especiais</label> 
                 </div>
                 <div class="form-group2">
-                    <input type="checkbox" name="endereço" id="eres" required>
+                    <input type="checkbox" name="endereço" id="eres">
                     <label for="eres" class="nomezinhos">Preferências alimentares</label>
                 </div>
                 <div class="form-group2">
@@ -212,17 +212,17 @@
             </div>
             <div class="form-group4">
                 <p>Li e aceito a <a href="#" class="privacidade">Política de Privacidade</a></p>
-                <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                <input type="checkbox" id="privacy-consent" name="privacy-consent" >
                 <label for="privacy-consent">Consentimento de Dados</label>
             </div>
             <div class="form-group4">
                 <p>Leia e aceite nossa <a href="#" class="privacidade">Política de Cancelamento</a></p>
-                <input type="checkbox" id="terms" name="terms" required>
+                <input type="checkbox" id="terms" name="terms" >
                 <label for="terms">Aceito os termos e condições</label>
             </div>
             <div id="botoes">
                 <button type="reset" id="limpa">Limpar</button>
-                <button type="submit" id="envia" onclick="mensagem()" >Enviar</button>
+                <button type="submit" id="envia" onclick="btnSendOnClick()" >Enviar</button>
                 <input type="hidden" name="redirectTo">
             </div>
         </form>
@@ -262,8 +262,6 @@
     </footer>
 </body>
 </html>
-<script>
-    function mensagem() {
-        alert("Enviado com sucesso !!")
-    }
+<script src="../js/reservas.js">
+
 </script>
