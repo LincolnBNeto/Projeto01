@@ -72,7 +72,7 @@
                 <div class="form-group">
                     <label for="istate">Estado:</label>
                     <select id="istate" name="state">
-                        <option value="">Selecione...</option>
+                        <option value="0">Selecione...</option>
                         <option value="ac">Acre</option>
                         <option value="al">Alagoas</option>
                         <option value="ap">Amapá</option>
@@ -262,165 +262,111 @@
     </footer>
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded'), () => {
+    document.addEventListener("DOMContentLoaded"), function () {
         const form = document.getElementById('reservation-form');
-
-        form.addEventListener('submit', (event) => {
-            // Previne o envio do formulário
-            event.preventDefault();
-
-            // Realiza a validação
-            if (validateForm()) {
-                // Se a validação for bem-sucedida, envie o formulário
-                form.submit();
-            }
-        });
-
-        function validateForm() {
-            clearErrors();
-            let valid = true;
-
-            // Validate Date and Time
+        
+        form.addEventListener('submit'), function (event) {
+            let isValid = true;
+            let errors = [];
+            
+            // Validação da data
             const dateInput = document.getElementById('idata');
-            const timeInput = document.getElementById('ihora');
             if (!dateInput.value) {
-                showError(dateInput, 'Data é obrigatória.');
-                valid = false;
+                isValid = false;
+                errors.push('A data é obrigatória.');
             }
+
+            // Validação da hora
+            const timeInput = document.getElementById('ihora');
             if (!timeInput.value) {
-                showError(timeInput, 'Hora é obrigatória.');
-                valid = false;
-            } else {
-                const time = timeInput.value.split(':');
-                const hour = parseInt(time[0], 10);
-                const min = parseInt(time[1], 10);
-                if (hour < 15 || hour > 24 || (hour === 24 && min > 0) || (hour === 1 && min < 0)) {
-                    showError(timeInput, 'A hora deve estar entre 15:00 e 01:00.');
-                    valid = false;
-                }
+                isValid = false;
+                errors.push('A hora é obrigatória.');
             }
 
-            // Validate Number of People
+            // Validação do número de pessoas
             const numberInput = document.getElementById('in');
-            if (!numberInput.value || numberInput.value < 1 || numberInput.value > 50) {
-                showError(numberInput, 'Número de pessoas deve estar entre 1 e 50.');
-                valid = false;
+            if (numberInput.value < 1 || numberInput.value > 50) {
+                isValid = false;
+                errors.push('Número de pessoas deve estar entre 1 e 50.');
             }
 
-            // Validate Personal Information
+            // Validação do nome
             const nameInput = document.getElementById('inome');
+            if (!nameInput.value.trim()) {
+                isValid = false;
+                errors.push('O nome é obrigatório.');
+            }
+
+            // Validação do e-mail
             const emailInput = document.getElementById('iemail');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value)) {
+                isValid = false;
+                errors.push('O e-mail deve ser válido.');
+            }
+
+            // Validação do telefone
             const phoneInput = document.getElementById('iphone');
+            const phonePattern = /^\(\d{2}\) \d{5}-\d{4}$/;
+            if (!phonePattern.test(phoneInput.value)) {
+                isValid = false;
+                errors.push('O telefone deve estar no formato (00) 00000-0000.');
+            }
+
+            // Validação do CPF
             const cpfInput = document.getElementById('icpf');
+            const cpfPattern = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+            if (!cpfPattern.test(cpfInput.value)) {
+                isValid = false;
+                errors.push('O CPF deve estar no formato xxx.xxx.xxx-xx.');
+            }
+
+            // Validação do endereço
             const addressInput = document.getElementById('ien');
+            if (!addressInput.value.trim()) {
+                isValid = false;
+                errors.push('O endereço é obrigatório.');
+            }
+
+            // Validação da cidade
             const cityInput = document.getElementById('icity');
-            const stateInput = document.getElementById('istate');
-
-            if (!nameInput.value) {
-                showError(nameInput, 'Nome é obrigatório.');
-                valid = false;
-            }
-            if (!emailInput.value || !validateEmail(emailInput.value)) {
-                showError(emailInput, 'E-mail inválido.');
-                valid = false;
-            }
-            if (!phoneInput.value || !validatePhone(phoneInput.value)) {
-                showError(phoneInput, 'Telefone inválido.');
-                valid = false;
-            }
-            if (!cpfInput.value || !validateCPF(cpfInput.value)) {
-                showError(cpfInput, 'CPF inválido.');
-                valid = false;
-            }
-            if (!addressInput.value) {
-                showError(addressInput, 'Endereço é obrigatório.');
-                valid = false;
-            }
-            if (!cityInput.value) {
-                showError(cityInput, 'Cidade é obrigatória.');
-                valid = false;
-            }
-            if (!stateInput.value) {
-                showError(stateInput, 'Estado é obrigatório.');
-                valid = false;
+            if (!cityInput.value.trim()) {
+                isValid = false;
+                errors.push('A cidade é obrigatória.');
             }
 
-            // Validate Gender
-            const genderInputs = document.getElementsByName('sexo');
-            if (![...genderInputs].some(input => input.checked)) {
-                showError(genderInputs[0], 'Sexo é obrigatório.');
-                valid = false;
+            // Validação do estado
+            const stateSelect = document.getElementById('istate');
+            if (stateSelect.value === "0") {
+                isValid = false;
+                errors.push('O estado é obrigatório.');
             }
 
-            // Validate Reservation Type
-            const reservationInputs = document.getElementsByName('tp');
-            if (![...reservationInputs].some(input => input.checked)) {
-                showError(reservationInputs[0], 'Tipo de reserva é obrigatório.');
-                valid = false;
+            // Validação do sexo
+            const genderRadios = document.getElementsByName('sexo');
+            if (![...genderRadios].some(radio => radio.checked)) {
+                isValid = false;
+                errors.push('O sexo é obrigatório.');
             }
 
-            // Validate Seat Preference
-            const seatPreferenceInputs = document.getElementsByName('area');
-            if (![...seatPreferenceInputs].some(input => input.checked)) {
-                showError(seatPreferenceInputs[0], 'Preferência de assento é obrigatória.');
-                valid = false;
+            // Validação do tipo de reserva
+            const typeRadios = document.getElementsByName('tp');
+            if (![...typeRadios].some(radio => radio.checked)) {
+                isValid = false;
+                errors.push('O tipo de reserva é obrigatório.');
             }
 
-            // Validate Special Needs
-            const specialNeedsCheckbox = document.getElementById('icard');
-            const specialNeedsTextarea = document.getElementById('itexto');
-            if (specialNeedsCheckbox.checked && !specialNeedsTextarea.value) {
-                showError(specialNeedsTextarea, 'Se você marcou necessidades especiais, deve informar detalhes.');
-                valid = false;
+            // Validação da preferência de assento
+            const seatRadios = document.getElementsByName('area');
+            if (![...seatRadios].some(radio => radio.checked)) {
+                isValid = false;
+                errors.push('A preferência de assento é obrigatória.');
             }
 
-            // Validate Privacy Policy
-            const privacyConsentCheckbox = document.getElementById('privacy-consent');
-            const termsCheckbox = document.getElementById('terms');
-            if (!privacyConsentCheckbox.checked) {
-                showError(privacyConsentCheckbox, 'Você deve aceitar a Política de Privacidade.');
-                valid = false;
+            if (!isValid) {
+                event.preventDefault();
+                alert(errors.join('\n'));
             }
-            if (!termsCheckbox.checked) {
-                showError(termsCheckbox, 'Você deve aceitar os termos e condições.');
-                valid = false;
-            }
-
-            // Validate Payment Information
-            const paymentSelect = document.getElementById('ipay');
-            if (paymentSelect.value === '0') {
-                showError(paymentSelect, 'Forma de pagamento é obrigatória.');
-                valid = false;
-            }
-
-            return valid;
-        }
-
-        function showError(element, message) {
-            const error = document.createElement('div');
-            error.classList.add('error');
-            error.textContent = message;
-            element.parentElement.appendChild(error);
-        }
-
-        function clearErrors() {
-            const errors = document.querySelectorAll('.error');
-            errors.forEach(error => error.remove());
-        }
-
-        function validateEmail(email) {
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(email);
-        }
-
-        function validatePhone(phone) {
-            const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
-            return regex.test(phone);
-        }
-
-        function validateCPF(cpf) {
-            const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-            return regex.test(cpf);
         }
     }
 </script>
