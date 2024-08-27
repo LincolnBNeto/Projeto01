@@ -1,161 +1,95 @@
-document.addEventListener('DOMContentLoaded'), () => {
-    const form = document.getElementById('reservation-form');
 
-    form.addEventListener('submit', (event) => {
-        // Previne o envio do formulário
-        event.preventDefault();
+function btnSendOnClick() {
+    
+    document.getElementById('reservation-form').addEventListener('button'), function(event) {
+        // Obtém os valores dos campos
+        const data = document.getElementById('idata').value;
+        const hora = document.getElementById('ihora').value;
+        const number = document.getElementById('in').value;
+        const nome = document.getElementById('inome').value;
+        const email = document.getElementById('iemail').value;
+        const phone = document.getElementById('iphone').value;
+        const cpf = document.getElementById('icpf').value;
+        const endereco = document.getElementById('ien').value;
+        const city = document.getElementById('icity').value;
+        const state = document.getElementById('istate').value;
+        const sexo = document.querySelector('input[name="sexo"]:checked');
+        const tp = document.querySelector('input[name="tp"]:checked');
+        const area = document.querySelector('input[name="area"]:checked');
+        const privacyConsent = document.getElementById('privacy-consent').checked;
+        const terms = document.getElementById('terms').checked;
+        const pay = document.getElementById('ipay').value;
 
-        // Realiza a validação
-        if (validateForm()) {
-            // Se a validação for bem-sucedida, envie o formulário
-            form.submit();
+        // Mensagens de erro
+        let errorMessage = '';
+
+        // Verifica se a data está preenchida
+        if (!data) {
+            errorMessage += 'A data é obrigatória.\n';
         }
-    });
 
-    function validateForm() {
-        clearErrors();
-        let valid = true;
-
-        // Validate Date and Time
-        const dateInput = document.getElementById('idata');
-        const timeInput = document.getElementById('ihora');
-        if (!dateInput.value) {
-            showError(dateInput, 'Data é obrigatória.');
-            valid = false;
-        }
-        if (!timeInput.value) {
-            showError(timeInput, 'Hora é obrigatória.');
-            valid = false;
+        // Verifica se a hora está preenchida e está dentro do intervalo permitido
+        if (!hora) {
+            errorMessage += 'A hora é obrigatória.\n';
         } else {
-            const time = timeInput.value.split(':');
-            const hour = parseInt(time[0], 10);
-            const min = parseInt(time[1], 10);
-            if (hour < 15 || hour > 24 || (hour === 24 && min > 0) || (hour === 1 && min < 0)) {
-                showError(timeInput, 'A hora deve estar entre 15:00 e 01:00.');
-                valid = false;
+            const time = new Date(`1970-01-01T${hora}:00`);
+            const minTime = new Date('1970-01-01T15:00:00');
+            const maxTime = new Date('1970-01-01T01:00:00');
+            if (time < minTime && time > maxTime) {
+                errorMessage += 'A hora deve estar entre 15:00 e 01:00.\n';
             }
         }
 
-        // Validate Number of People
-        const numberInput = document.getElementById('in');
-        if (!numberInput.value || numberInput.value < 1 || numberInput.value > 50) {
-            showError(numberInput, 'Número de pessoas deve estar entre 1 e 50.');
-            valid = false;
+        // Verifica se o número de pessoas está preenchido e dentro do intervalo
+        if (!number || number < 1 || number > 50) {
+            errorMessage += 'O número de pessoas deve ser entre 1 e 50.\n';
         }
 
-        // Validate Personal Information
-        const nameInput = document.getElementById('inome');
-        const emailInput = document.getElementById('iemail');
-        const phoneInput = document.getElementById('iphone');
-        const cpfInput = document.getElementById('icpf');
-        const addressInput = document.getElementById('ien');
-        const cityInput = document.getElementById('icity');
-        const stateInput = document.getElementById('istate');
-
-        if (!nameInput.value) {
-            showError(nameInput, 'Nome é obrigatório.');
-            valid = false;
+        // Verifica se todos os campos obrigatórios estão preenchidos
+        if (!nome) {
+            errorMessage += 'O nome é obrigatório.\n';
         }
-        if (!emailInput.value || !validateEmail(emailInput.value)) {
-            showError(emailInput, 'E-mail inválido.');
-            valid = false;
+        if (!email || !validateEmail(email)) {
+            errorMessage += 'O e-mail deve ser um e-mail válido.\n';
         }
-        if (!phoneInput.value || !validatePhone(phoneInput.value)) {
-            showError(phoneInput, 'Telefone inválido.');
-            valid = false;
+        if (!phone || !validatePhone(phone)) {
+            errorMessage += 'O telefone deve estar no formato (00) 00000-0000.\n';
         }
-        if (!cpfInput.value || !validateCPF(cpfInput.value)) {
-            showError(cpfInput, 'CPF inválido.');
-            valid = false;
+        if (!cpf || !validateCPF(cpf)) {
+            errorMessage += 'O CPF deve estar no formato xxx.xxx.xxx-xx.\n';
         }
-        if (!addressInput.value) {
-            showError(addressInput, 'Endereço é obrigatório.');
-            valid = false;
+        if (!endereco) {
+            errorMessage += 'O endereço é obrigatório.\n';
         }
-        if (!cityInput.value) {
-            showError(cityInput, 'Cidade é obrigatória.');
-            valid = false;
+        if (!city) {
+            errorMessage += 'A cidade é obrigatória.\n';
         }
-        if (!stateInput.value) {
-            showError(stateInput, 'Estado é obrigatório.');
-            valid = false;
+        if (state === "0") {
+            errorMessage += 'O estado deve ser selecionado.\n';
         }
-
-        // Validate Gender
-        const genderInputs = document.getElementsByName('sexo');
-        if (![...genderInputs].some(input => input.checked)) {
-            showError(genderInputs[0], 'Sexo é obrigatório.');
-            valid = false;
+        if (!sexo) {
+            errorMessage += 'O sexo é obrigatório.\n';
+        }
+        if (!tp) {
+            errorMessage += 'O tipo de reserva é obrigatório.\n';
+        }
+        if (!area) {
+            errorMessage += 'A preferência de assento é obrigatória.\n';
+        }
+        if (!privacyConsent) {
+            errorMessage += 'O consentimento de dados é obrigatório.\n';
+        }
+        if (!terms) {
+            errorMessage += 'Você deve aceitar os termos e condições.\n';
+        }
+        if (pay === "0") {
+            errorMessage += 'A forma de pagamento deve ser selecionada.\n';
         }
 
-        // Validate Reservation Type
-        const reservationInputs = document.getElementsByName('tp');
-        if (![...reservationInputs].some(input => input.checked)) {
-            showError(reservationInputs[0], 'Tipo de reserva é obrigatório.');
-            valid = false;
+        // Exibe mensagem de erro se houver alguma
+        if (errorMessage) {
+            alert(errorMessage);
+            event.preventDefault(); // Impede o envio do formulário
         }
-
-        // Validate Seat Preference
-        const seatPreferenceInputs = document.getElementsByName('area');
-        if (![...seatPreferenceInputs].some(input => input.checked)) {
-            showError(seatPreferenceInputs[0], 'Preferência de assento é obrigatória.');
-            valid = false;
-        }
-
-        // Validate Special Needs
-        const specialNeedsCheckbox = document.getElementById('icard');
-        const specialNeedsTextarea = document.getElementById('itexto');
-        if (specialNeedsCheckbox.checked && !specialNeedsTextarea.value) {
-            showError(specialNeedsTextarea, 'Se você marcou necessidades especiais, deve informar detalhes.');
-            valid = false;
-        }
-
-        // Validate Privacy Policy
-        const privacyConsentCheckbox = document.getElementById('privacy-consent');
-        const termsCheckbox = document.getElementById('terms');
-        if (!privacyConsentCheckbox.checked) {
-            showError(privacyConsentCheckbox, 'Você deve aceitar a Política de Privacidade.');
-            valid = false;
-        }
-        if (!termsCheckbox.checked) {
-            showError(termsCheckbox, 'Você deve aceitar os termos e condições.');
-            valid = false;
-        }
-
-        // Validate Payment Information
-        const paymentSelect = document.getElementById('ipay');
-        if (paymentSelect.value === '0') {
-            showError(paymentSelect, 'Forma de pagamento é obrigatória.');
-            valid = false;
-        }
-
-        return valid;
-    }
-
-    function showError(element, message) {
-        const error = document.createElement('div');
-        error.classList.add('error');
-        error.textContent = message;
-        element.parentElement.appendChild(error);
-    }
-
-    function clearErrors() {
-        const errors = document.querySelectorAll('.error');
-        errors.forEach(error => error.remove());
-    }
-
-    function validateEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    }
-
-    function validatePhone(phone) {
-        const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
-        return regex.test(phone);
-    }
-
-    function validateCPF(cpf) {
-        const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-        return regex.test(cpf);
     }
 }
