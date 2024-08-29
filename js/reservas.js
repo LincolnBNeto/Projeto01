@@ -18,7 +18,6 @@ function btnSendOnClick() {
     const txtTexto = document.getElementById('itexto');
     const selCommunicationPreferences = document.getElementById('icommunication-preferences');
     const selPay = document.getElementById('ipay');
-    const txtPromoCode = document.getElementById('ipromo-code');
     const chkPrivacyConsent = document.getElementById('privacy-consent');
     const chkTerms = document.getElementById('terms');
 
@@ -85,10 +84,6 @@ function btnSendOnClick() {
     else if (selPay.value === "0") {
         alert('Selecione a forma de pagamento');
         selPay.focus();
-    }
-    else if (txtPromoCode.value.length < 1 || txtPromoCode.value.length > 7) {
-        alert('Código de promoção deve ter entre 1 e 7 caracteres');
-        txtPromoCode.focus();
     }
     else if (!chkPrivacyConsent.checked) {
         alert('Você deve aceitar a Política de Privacidade');
